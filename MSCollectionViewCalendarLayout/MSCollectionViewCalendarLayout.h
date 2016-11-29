@@ -3,7 +3,7 @@
 //  MSCollectionViewCalendarLayout
 //
 //  Created by Eric Horacek on 2/18/13.
-//  Copyright (c) 2013 Monospace Ltd. All rights reserved.
+//  Copyright (c) 2015 Eric Horacek. All rights reserved.
 //
 //  This code is distributed under the terms and conditions of the MIT license.
 //
@@ -61,18 +61,18 @@ typedef NS_ENUM(NSUInteger, MSHeaderLayoutType) {
 @property (nonatomic, assign) CGFloat sectionWidth;
 @property (nonatomic, assign) CGFloat minimumItemHeight;
 @property (nonatomic, assign) CGFloat hourHeight;
-@property (nonatomic, assign) CGFloat dayColumnHeaderHeight;
-@property (nonatomic, assign) CGFloat timeRowHeaderWidth;
-@property (nonatomic, assign) CGSize currentTimeIndicatorSize;
-@property (nonatomic, assign) CGFloat horizontalGridlineHeight;
-@property (nonatomic, assign) CGFloat verticalGridlineWidth;
-@property (nonatomic, assign) CGFloat currentTimeHorizontalGridlineHeight;
-@property (nonatomic, assign) UIEdgeInsets sectionMargin;
-@property (nonatomic, assign) UIEdgeInsets contentMargin;
-@property (nonatomic, assign) UIEdgeInsets cellMargin;
-@property (nonatomic, assign) MSSectionLayoutType sectionLayoutType;
-@property (nonatomic, assign) MSHeaderLayoutType headerLayoutType;
-@property (nonatomic, assign) BOOL displayHeaderBackgroundAtOrigin;
+@property (nonatomic) CGFloat dayColumnHeaderHeight;
+@property (nonatomic) CGFloat timeRowHeaderWidth;
+@property (nonatomic) CGSize currentTimeIndicatorSize;
+@property (nonatomic) CGFloat horizontalGridlineHeight;
+@property (nonatomic) CGFloat verticalGridlineWidth;
+@property (nonatomic) CGFloat currentTimeHorizontalGridlineHeight;
+@property (nonatomic) UIEdgeInsets sectionMargin;
+@property (nonatomic) UIEdgeInsets contentMargin;
+@property (nonatomic) UIEdgeInsets cellMargin;
+@property (nonatomic) MSSectionLayoutType sectionLayoutType;
+@property (nonatomic) MSHeaderLayoutType headerLayoutType;
+@property (nonatomic) BOOL displayHeaderBackgroundAtOrigin;
 
 - (CGFloat)currentHorizontalSectionToPoint:(CGFloat)xOffset;
 

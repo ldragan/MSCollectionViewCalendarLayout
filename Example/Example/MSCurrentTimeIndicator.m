@@ -3,7 +3,7 @@
 //  Example
 //
 //  Created by Eric Horacek on 2/27/13.
-//  Copyright (c) 2013 Monospace Ltd. All rights reserved.
+//  Copyright (c) 2015 Eric Horacek. All rights reserved.
 //
 
 #import "MSCurrentTimeIndicator.h"
@@ -36,7 +36,7 @@
         
         NSCalendar *calendar = [NSCalendar currentCalendar];
         NSDate *oneMinuteInFuture = [[NSDate date] dateByAddingTimeInterval:60];
-        NSDateComponents *components = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:oneMinuteInFuture];
+        NSDateComponents *components = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:oneMinuteInFuture];
         NSDate *nextMinuteBoundary = [calendar dateFromComponents:components];
         
         self.minuteTimer = [[NSTimer alloc] initWithFireDate:nextMinuteBoundary interval:60 target:self selector:@selector(minuteTick:) userInfo:nil repeats:YES];
